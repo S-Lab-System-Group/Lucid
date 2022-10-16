@@ -1,0 +1,24 @@
+# Python egg metadata, regenerated from source files by setuptools.
+*.egg-info
+.eggs/
+
+# PyPI distribution artifacts.
+build/
+dist/
+
+# Byte-compiled
+_pycache__/
+.cache/
+
+# Compiled python modules.
+*.pyc
+
+# PyCharm/vscode
+.idea
+.vscode
+
+# jupyter checkpoints
+**/.ipynb_checkpoints
+
+# Other
+*.DS_Store
