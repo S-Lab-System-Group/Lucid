@@ -103,17 +103,17 @@ def main(args):
             utils.cluster_concatenate(policy, args.placer, log_dir, args.trace_dir)
     else:
         utils.cluster_concatenate(args.scheduler, args.placer, log_dir, args.trace_dir)
+        utils.cluster_analysis(args.placer, log_dir, args.trace_dir)
 
-    utils.cluster_analysis(args.placer, log_dir, args.trace_dir)
+        """Fast query result"""
+        sched_label = args.scheduler + "_consolidate"
+        jct_df = pd.read_csv(f"{log_dir}/jct_avg_consolidate.csv", index_col=0)
+        jct = jct_df.at["all", sched_label]
+        que_df = pd.read_csv(f"{log_dir}/que_avg_consolidate.csv", index_col=0)
+        que = que_df.at["all", sched_label]
+        logger.info(f"Summary of {args.scheduler}: Avg. JCT {jct}s, Avg. Queue {que}s")
+
     logger.info(f"Execution Time: {round(time.perf_counter() - code_start, 2)}s")
-
-    """Fast query result"""
-    sched_label = args.scheduler + "_consolidate"
-    jct_df = pd.read_csv(f"{log_dir}/jct_avg_consolidate.csv", index_col=0)
-    jct = jct_df.at["all", sched_label]
-    que_df = pd.read_csv(f"{log_dir}/que_avg_consolidate.csv", index_col=0)
-    que = que_df.at["all", sched_label]
-    logger.info(f"Summary of {args.scheduler}: Avg. JCT {jct}s, Avg. Queue {que}s")
 
 
 if __name__ == "__main__":
