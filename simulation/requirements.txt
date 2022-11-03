@@ -5,5 +5,6 @@ scikit_learn
 lightgbm
 seaborn
 matplotlib
+xgboost
 
 
