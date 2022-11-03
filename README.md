@@ -1,4 +1,5 @@
 # Artifact for Lucid
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7275326.svg)](https://doi.org/10.5281/zenodo.7275326)
 
 This repository contains the artifact for our ASPLOS '23 paper "*Lucid: A Non-Intrusive, Scalable and Interpretable Scheduler for Deep Learning Training Jobs*". It includes following parts:
 
