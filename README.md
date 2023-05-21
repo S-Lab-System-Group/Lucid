@@ -174,7 +174,7 @@ The data path storing all datasets is specified in `./workloads/settings.py` as 
 
     ```bash
     wget https://shapenet.cs.stanford.edu/ericyi/shapenetcore_partanno_segmentation_benchmark_v0.zip --no-check-certificate
-    unzip shapenetcore_partanno_segmentation_benchmark_v0.zipcollect_metric/workloadspointnet.pytorch.
+    unzip shapenetcore_partanno_segmentation_benchmark_v0.zip
 
 - SQuAD: The data can be downloaded with the following link and should be saved under `data_dir/SQUAD_DIR/` directory.
 
